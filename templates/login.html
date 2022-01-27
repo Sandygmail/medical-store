@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="" method='POST'>{% csrf_token %}
+    <div class="form-group">
+        <label for="user" class="mb-2 mr-sm-2">User Name:</label>
+        <input type="text" class="form-control mb-4 mr-sm-4" id="user" placeholder="Enter User Name" name="user">
+        <label for="pswd" class="mb-2 mr-sm-2">Password:</label>
+        <input type="text" class="form-control mb-4 mr-sm-4" id="pswd" placeholder="Enter password" name="pswd">
+      </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <a href="{% url 'register' %}" class="btn btn-success" >Register</a>
+    <a href="{% url 'user_details' %}" class="btn btn-success" >Back to List</a>
+  </form>
+{% endblock content %}
